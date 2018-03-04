@@ -5,8 +5,137 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
-
+	<!-- Шапка-->
+	<header class="main-header">
+		<img class="main-header-logo" src="http://placehold.it/150x100" width="155" height="70" alt="Логотип Gllacy"> <!-- ???Не отображается подпись в лого-->
+		<nav class="main-navigation">
+			<ul class="site-navigation"> 
+				<li><a href="catalog.html">Каталог</a></li>
+				<li><a href="delivery-payment.html">Доставка и оплата</a></li>
+				<li><a href="about-company.html">О компании</a></li>
+			</ul>
+			<nav class="user-navigation">
+				<ul>
+					<li class="search"></li>
+					<li class="login-link">Вход</li>
+					<li class="basket">Корзина</li>
+				</ul>
+		</nav>
+		<div class="main-header-contacts">
+			<p>С 10 до 20, ежедневно</p>
+			<p><b>8 812 450-25-25</b></p>
+		</div>
+	</header>
+	<!--Основной раздел -->
+	<main class="container">
+		<section class="container-carousel">
+			<h1 class="visually-hidden">GllacyShop</h1> <!--Скрытый заголовок-->
+			<h2>Крем-брюле и пломбир с малиновым джемом</h2>
+			<form class="container-get-both" action="" method="get">
+				<a href="catalog.html">Давайте оба</a>
+			</form>
+		</section>
+		<section class="container-banners">
+			<div class="container-banners-jam">
+				<img src="http://placehold.it/150x100" width="560" height="230" alt="Малинки даром!">
+				<h3>Малинки даром!</h3>
+				<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+				<a href="basket.html">Хочу варенье!</a>
+			</div>
+			<div class="container-banners-chocolate"></div>
+				<img src="http://placehold.it/150x100" width="560" height="230" alt="Шоколадки даром!">
+				<h3>Шоколадки даром!</h3>
+				<pПри покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+				<a href="basket.html">Хочу шоколадки!</a>
+			</div>
+		</section>
+		<section class="hits">
+			<ul compact="hits-list">
+				<li class="hits-list-item">
+					<a class="product" href="catalog-item.html"><img src="img/product-1.jpg" width="265" height="265" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+					<p class="conteiner-item-price">310P/<span>кг</span></p>
+					<h3><a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+				</li>
+				<li class="hits-list-item">
+					<a class="product" href="catalog-item.html"><img src="img/product-2.jpg" width="265" height="265" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+					<p class="conteiner-item-price">380P/<span>кг</span></p>
+					<h3><a href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a></h3>
+				</li>
+				<li class="hits-list-item">
+					<a class="product" href="catalog-item.html"><img src="img/product-3.jpg" width="265" height="265" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+					<p class="conteiner-item-price">355P/<span>кг</span></p>
+					<h3><a href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+				</li>
+				<li class="hits-list-item">
+					<a class="product" href="catalog-item.html"><img src="img/product-4.jpg" width="265" height="265" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+					<p class="conteiner-item-price">415P/<span>кг</span></p>
+					<h3><a href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a></h3>
+				</li>
+			</ul>	
+		</section>
+		<section class="conteiner-seo">
+			<h2></h2>
+			<div class="conteiner-seo-left"></div>
+				<h3 class="visually-hidden">Технологии</h3> <!-- скрытый заголовок -->
+				<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+				<h3>Технологии</h3>Сырье</h3> <!-- скрытый заголовок -->
+				<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
+			<div class="conteiner-seo-right"></div>
+				<h3>Технологии</h3>Поставщики</h3> <!-- скрытый заголовок -->
+				<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+				<h3>Технологии</h3>Достака</h3> <!-- скрытый заголовок -->
+				<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+		</section>
+		<section class="other">
+			<div class="other-blog">
+				<h3>Новое в нашем блоге</h3>
+			</div>
+			<div class="other-delivery">
+				<h3>Рассылка</h3>
+				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+				<form name="e-" method="post">
+					<input type="email" name="email" placeholder="Электронная почта">
+					<button title="submit" a>Отправить</button>
+				</form> 
+			</div>
+		</section>
+		<section id="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2str!4v1520088744923" width="1200" height="425" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<div id="adress">
+				<h3>Конакты</h3>
+				<P>Адрес главного офиса и офлайн-магазина:<br>
+				<b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b><br>
+				Для заказов по телефону:<br>
+				<b>8 812 450-25-25</b>(с 10 до 20 ежедневно)</p>
+				<form>
+					<input type="button" name="" value="Форма обратной связи"></button>
+				</form>
+			</div>
+		<!--Подвал-->
+		<footer class="main-footer">
+			<section> class="footer-social">
+				<ul>
+					<li><a class="social-button" href="#">Твиттер</a></li>
+			        <li><a class="social-button" href="#">Инстаграм</a></li>
+			        <li><a class="social-button" href="#">Фейсбук</a></li>
+			        <li><a class="social-button" href="#">Вконтакте</a></li>
+				</ul>
+			</section>
+				<section class="footer-menu">
+					<ul>
+						<li><a class="footer-menu-item" href="#">Для поставщиков</a></li>
+						<li><a class="footer-menu-item" href="#">О производстве</a></li>
+						<li><a class="footer-menu-item" href="#">Наши документы</a></li>
+						<li><a class="footer-menu-item" href="#">Экологические стандарты</a></li>
+					</ul>
+				</section>
+				<section class="footer-copyright">
+					<ul>
+						<li><a href="https://htmlacademy.ru/intensive"><img src="http://placehold.it/150x100" width="114" height="45"></a></li>
+						<li><p>Сделано в HTML Academy © 2017</p></li>
+					</ul>
+				</section>
+		</footer>
+	</main>
   </body>
 </html>
