@@ -4,11 +4,12 @@
 <head>
 	<meta charset="utf-8">
 	<title>GllacyShop</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<!-- Шапка-->
 	<header class="main-header">
-		<img class="main-header-logo" src="http://placehold.it/150x100" width="155" height="70" alt="Логотип Gllacy"> <!-- ???Не отображается подпись в лого-->
+		<img class="main-header-logo" src="img/svg-gllacy/logo.svg" width="154" height="64" alt="Логотип Gllacy"> <!-- ЛОГО-->
 		<nav class="main-navigation">
 			<ul class="site-navigation"> 
 				<li><a href="catalog.html">Каталог</a></li>
@@ -18,10 +19,14 @@
 			<nav class="user-navigation">
 				<ul>
 					<li class="search"></li>
-					<li class="login-link">Вход</li>
-					<li class="basket">Корзина</li>
+					<li class="login-link">
+						<a class="login-link" href="login.html"><img src="img/svg-gllacy/entrance-white.svg">Вход</a>
+					</li>
+					<li class="basket">
+						<a href="#"><img src="img/svg-gllacy/basket.svg">Пусто
+					</li>
 				</ul>
-		</nav>
+			</nav>
 		<div class="main-header-contacts">
 			<p>С 10 до 20, ежедневно</p>
 			<p><b>8 812 450-25-25</b></p>
@@ -31,6 +36,7 @@
 	<main class="container">
 		<section class="container-carousel">
 			<h1 class="visually-hidden">GllacyShop</h1> <!--Скрытый заголовок-->
+			<img src="img/index/slide-1.jpg">
 			<h2>Крем-брюле и пломбир с малиновым джемом</h2>
 			<form class="container-get-both" action="" method="get">
 				<a href="catalog.html">Давайте оба</a>
@@ -51,45 +57,52 @@
 			</div>
 		</section>
 		<section class="hits">
+			<h1 class="visually-hidden">Хиты продаж</h1> <!--Скрытый заголовок-->
 			<ul compact="hits-list">
-				<li class="hits-list-products">
-					<a class="product" href="catalog-item.html"><img src="img/index/hit-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
-					<p class="conteiner-price">310P/<span>кг</span></p>
-					<h3><a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+				<li class="hits-list-items">
+					<a class="product" href="catalog-item.html"><img src="img/svg-gllacy/hit.svg"><img src="img/index/hit-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+					<p class="conteiner-price">310<img src="img/svg-gllacy/ruble.svg">/<span>кг</span></p>
+					<h2><a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h2>
 				</li>
-				<li class="hits-list-products">
-					<a class="product" href="catalog-item.html"><img src="img/index/hit-2.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
-					<p class="conteiner-price">380P/<span>кг</span></p>
-					<h3><a href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a></h3>
+				<li class="hits-list-items">
+					<a class="product" href="catalog-item.html"><img src="img/svg-gllacy/hit.svg"><img src="img/index/hit-2.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+					<p class="conteiner-price">380<img src="img/svg-gllacy/ruble.svg">/<span>кг</span></p>
+					<h2><a href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a></h2>
 				</li>
-				<li class="hits-list-products">
-					<a class="product" href="catalog-item.html"><img src="img/index/hit-3.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
-					<p class="conteiner-price">355P/<span>кг</span></p>
-					<h3><a href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+				<li class="hits-list-items">
+					<a class="product" href="catalog-item.html"><img src="img/svg-gllacy/hit.svg"><img src="img/index/hit-3.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+					<p class="conteiner-price">355<img src="img/svg-gllacy/ruble.svg">/<span>кг</span></p>
+					<h2><a href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h2>
 				</li>
-				<li class="hits-list-products">
-					<a class="product" href="catalog-item.html"><img src="img/index/hit-4.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
-					<p class="conteiner-price">415P/<span>кг</span></p>
-					<h3><a href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a></h3>
+				<li class="hits-list-items">
+					<a class="product" href="catalog-item.html"><img src="img/svg-gllacy/hit.svg"><img src="img/index/hit-4.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+					<p class="conteiner-price">415<img src="img/svg-gllacy/ruble.svg">/<span>кг</span></p>
+					<h2><a href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a></h2>
 				</li>
 			</ul>	
 		</section>
 		<section class="conteiner-seo">
-			<h2></h2>
+			<h2>Преимущества Gllacy</h2> <!-- скрытый заголовок -->
 			<div class="conteiner-seo-left"></div>
 				<h3 class="visually-hidden">Технологии</h3> <!-- скрытый заголовок -->
+				<img src="img/svg-gllacy/ice-cream.svg">
 				<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
 				<h3>Сырье</h3> <!-- скрытый заголовок -->
+				<img src="img/svg-gllacy/eco.svg">
 				<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
 			<div class="conteiner-seo-right"></div>
 				<h3>Поставщики</h3> <!-- скрытый заголовок -->
+				<img src="img/svg-gllacy/cow.svg">
 				<p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
 				<h3>Доставка</h3> <!-- скрытый заголовок -->
+				<img src="img/svg-gllacy/thermometer.svg">
 				<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
 		</section>
 		<section class="other">
 			<div class="other-blog">
-				<h3>Новое в нашем блоге</h3>
+				<img src="img/index/blog-background.jpg">
+				<h2>Новое в нашем блоге</h2>
+				<a href="advises.html">10 способов сервировки фруктовых щербетов к столу</a>
 			</div>
 			<div class="other-delivery">
 				<h3>Рассылка</h3>
@@ -101,7 +114,9 @@
 			</div>
 		</section>
 		<section id="map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2str!4v1520088744923" width="1200" height="425" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<h2 class="visually-hidden">Адрес магазина</h2> <!-- скрытый заголовок -->
+			<img src="img/index/map.jpg" alt="Адрес:ул. Большая Конюшенная 19/8, Санкт-Петербург"> <!-- КАРТА. Нужно ли оборачивать в ссылку, нужен ли переход на карту google?-->
+			<img src="img/svg-gllacy/pin.svg">
 			<div id="adress">
 				<h3>Конакты</h3>
 				<P>Адрес главного офиса и офлайн-магазина:<br>
@@ -109,22 +124,35 @@
 				Для заказов по телефону:<br>
 				<b>8 812 450-25-25</b>(с 10 до 20 ежедневно)</p>
 				<form>
+					<label class="visually-hidden">Открыть форсу обратной связи</label> <!-- Скрытый лейбл-->
 					<input type="button" name="" value="Форма обратной связи"></button>
 				</form>
 			</div>
 		<!--Подвал-->
 		<footer class="main-footer">
-			<section> class="footer-social">
+			<section class="footer-social">
+				<h2 class="visually-hidden">Ссылки на социальные сети</h2> <!-- скрытый заголовок -->
 				<ul>
-					<li><a class="social-button" href="#">Твиттер</a></li>
-			        <li><a class="social-button" href="#">Инстаграм</a></li>
-			        <li><a class="social-button" href="#">Фейсбук</a></li>
-			        <li><a class="social-button" href="#">Вконтакте</a></li>
+					<li>
+						<h3 class="visually-hidden">Ссылка на Твиттер</h3> <!-- скрытый заголовок -->
+						<a class="social-button" href="https://twitter.com/"><img src="img/svg-gllacy/twitter.svg" alt="Твиттер"></a>
+					</li>
+			        <li>
+			        	<h3 class="visually-hidden">Ссылка на Инстаграм</h3> <!-- скрытый заголовок -->
+			        	<a class="social-button" href="https://www.instagram.com/"><img src="img/svg-gllacy/instagram.svg" alt="Инстаграм"></a>
+			        </li>
+			        <li>
+			        	<h3 class="visually-hidden">Ссылка на Фейсбук</h3> <!-- скрытый заголовок -->
+			        	<a class="social-button" href="https://www.facebook.com/"><img src="img/svg-gllacy/fb.svg" alt="Фейсбук"></a></li>
+			        <li>
+			        	<h3 class="visually-hidden">Ссылка на Вконтакте</h3> <!-- скрытый заголовок -->
+			        	<a class="social-button" href="https://vk.com/"><img src="img/svg-gllacy/vk.svg" alt="Вконтакте"></a>
+			        </li>
 				</ul>
 			</section>
 				<section class="footer-menu">
 					<ul>
-						<li><a class="footer-menu-item" href="#">Для поставщиков</a></li>
+						<li><a class="footer-menu-item" href="#"><img src="img/svg-gllacy/heart.svg"> Для поставщиков</a></li>
 						<li><a class="footer-menu-item" href="#">О производстве</a></li>
 						<li><a class="footer-menu-item" href="#">Наши документы</a></li>
 						<li><a class="footer-menu-item" href="#">Экологические стандарты</a></li>
@@ -132,11 +160,70 @@
 				</section>
 				<section class="footer-copyright">
 					<ul>
-						<li><a href="https://htmlacademy.ru/intensive"><img src="http://placehold.it/150x100" width="114" height="45"></a></li>
+						<li><a href="https://htmlacademy.ru/intensive"><img src="img/svg-gllacy/logo-htmlacademy-small.svg" width="135" height="45"></a></li> <!-- ????Как узнать габариты лого-->
 						<li><p>Сделано в HTML Academy © 2017</p></li>
 					</ul>
 				</section>
 		</footer>
+		<section class="modal modal-catalog">
+				<ul class="menu-catalog">
+					<li><a href="">Сливочное</a></li>
+					<li><a href="">Щербеты</a></li>
+					<li><a href="#">Фруктовый лед</a></li>
+					<li><a href="">Мелорин</a></li>
+				</ul>
+			</form>
+		</section>
+		<section class="modal modal-search">
+			<form>
+				<label for="search" class="visually-hidden">Поиск</label> <!--Скрытый лейбл-->
+				<input id="search" type="text" name="search" placeholder="Что ищем?"><img src="img/svg-gllacy/loupe.svg">
+			</form>
+		</section>
+		<section class="modal modal-login">
+        	<h1 class="visually-hidden">Личный кабинет</h2> <!--Скрытый заголовок-->
+        		<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+		        	<label for="email" class="visually-hidden">Электронная почта</label> <!--Скрытый лейбл-->
+		        	<input type="email" name="email" placeholder="Электронная почта" autofocus=""><br/>
+		        	<label for="password" class="visually-hidden">Пароль</label> <!--Скрытый лейбл-->
+		        	<input type="password" name="password" placeholder="Пароль"><br/>
+		        	<button class="submit" name="submit" value="Войти">Войти</button><br/>
+		        	<a href="#">Забыли пароль?</a><br/>
+		        	<a href="#">Новая регистрация</a>
+		        </form>	
+        </section>
+        <section> <!-- Модальное окно корзины-->
+        	<form class="modal modal-basket" action="https://echo.htmlacademy.ru" method="post">
+        	<h1 class="basket-list">Корзина с товарами</h2>
+        		<button type="button"><img src="img/svg-gllacy/basket-red.svg"> 2 товара</button>
+        		<table border="0">
+        			<caption class="visually-hidden">Выбранные товары</caption> <!--Скрытый заголовок таблицы-->
+        			<tr>
+        				<td><img src="img/svg-gllacy/cross-small.svg"></td>
+        				<td><img src="img/styleguide/orange-jam.jpg"></td>
+        				<td>Пломбир с апрельсиновым джемом</td>
+        				<td>1,5 кг</td>
+        				<td>x</td>
+        				<td>200 руб.</td>
+        				<td>300 руб.</td>
+        			</tr>
+        			    <tr>
+        				<td><img src="img/svg-gllacy/cross-small.svg"></td>
+        				<td><img src="img/styleguide/strawberry-white-chocolate.jpg"></td>
+        				<td>Клубничный пломбир с присыпкой из белого шоколада</td>
+        				<td>1,5 кг</td>
+        				<td>x</td>
+        				<td>300 руб.</td>
+        				<td>450 руб.</td>
+        			</tr>
+        			<tr>
+        				<td colspan="3"></td>
+        				<td colspan="2">Итого: 750 руб.</td>
+        			</tr>	
+        		</table>
+        		<button type="submit">Оформить заказ</button>
+        	</form>
+        </section>
 	</main>
 </body>
 </html>
