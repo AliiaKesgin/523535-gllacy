@@ -1,3 +1,319 @@
 body{
-	background-color:#849d8f;
+	margin: 0px;
+	padding: 0px;
+	color: #ffffff;
+	font-size: 16px;
+	font-family: "Roboto", "Arial", sans-serif;
+	line-height: 22px;
+
+	/* Временно для сетки */ 
+  	background-image: url('img/index/temporariry-index-1200.jpg');
 }
+
+.inner-page{
+	background-color:#849d8f;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 24px 27px;
+	font-family: "Roboto", "Arial", sans-serif;
+	color: #ffffff;
+ }
+
+.visually-hidden{
+	display: none;
+}
+
+a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+button{ /*нужно ли задавать ширины для всех кнопок или же делать авто  и отступы?*/
+	color: #ffffff;
+	width: auto;
+	height: auto;
+	padding-top: ;
+	padding-bottom:; 
+}
+
+.main-header{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+}
+
+
+.header-user-navigation{
+	margin-left: 363px;
+}
+
+
+.main-navigation{
+	font-size: 16px;
+	line-height: 18px;
+	/*width: 349px;
+	height: 15px;*/
+}
+
+.site-navigation,
+.user-navigation{
+	list-style: none;
+
+}
+
+.site-navigation li{
+	display: inline-block;
+	margin-right: 29px; /*стоит ли использовать отступ или нужно это дедать flex боксами?*/
+}
+
+.site-navigation li:last-child{
+	margin-right: 0px; 
+}
+
+.user-navigation li{
+	display: inline-block;
+	margin-right: 9px; /*стоит ли использовать отступ или нужно это дедать flex боксами?*/
+}
+
+.user-navigation li:last-child{
+	display: inline-block;
+	margin-right: 0px; 
+}
+
+/*стиль для навигац. кнопок в хедере */
+.user {
+	background-color: #a2b8ac;
+	-moz-border-radius:  15px; /* Firefox */
+	-webkit-border-radius:  15px; /* Safari 4 */
+	border-radius:  15px; /* IE 9, Safari 5, Chrome */
+	padding:6px 8px;
+	/*display: none;*/
+}
+
+.mode-wrapper{
+	justify-content:flex-end;
+	margin-left:auto;
+}
+
+.mode-wrapper .mode{ /*как приэать блок к правому краю*/
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.mode-wrapper span{
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: bold;
+}
+
+
+.container-carousel{
+	font-size: 60px;
+	line-height: 60.35px;
+	font-weight: bold;
+}
+
+.container-cauresel a{
+	font-size: 32px;
+	/*line-height: 44px;*/
+}
+
+.banners h3{
+	font-size: 35px;
+	/*line-height: 41px;*/
+}
+
+.banners p{
+	font-size: 18px;
+	/*line-height: 22px;*/
+}
+
+.banner-left{
+	
+}
+
+.banner-right{
+	
+}
+
+/*стиль для красных ссылок-кнопок*/
+.button{
+	background-color: #f06541;
+	border-radius: 30px;
+	padding:10px 20px; /*замерить точнее*/
+	width:auto;
+	height:auto;
+
+}
+
+.banners a{
+	font-size: 18px;
+	/*line-height: 24px;*/
+}
+
+
+.conteiner-price{
+	font-size: 45px;
+	//*line-height: 45px;*/
+}
+
+.conteiner-price span{
+	font-size: 30px;
+	/*line-height: 45px;*/
+}
+
+.hits-list h3{
+	font-size: 16px; /*также задано в body,но стиль не применяется*/
+	line-height: 22px; /*также задано в body, но стиль не применятся*/
+}
+
+.conteiner-seo {
+	color: #323232;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.seo{
+	font-size: 24px;
+	line-height:30px;
+}
+
+.other-blog h3{
+	color: #323232;
+	font-size: 16px;
+	//*line-height: 22px;*/	
+}
+
+.other-blog a{
+	color: #323232;
+	font-size: 24px;
+	line-height: 30px;
+	text-decoration: underline;
+}
+
+
+.other-delivery p{
+	color:#5a5a5a;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.contact-block{ 
+	background-color:#fffffe;
+	width:300px;
+	height:305px;
+	border-radius: 15px;
+}
+
+.map p{
+	color: #323232;
+	font-size:14px;
+	line-height:20px;
+}
+
+.map span{
+	color: #323232;
+	font-size:18px;
+	line-height:24px;
+	font-weight: bold;
+}
+
+.footer-social{
+	list-style: none;
+}
+
+
+.footer-social li{
+	display: inline-block;
+}
+
+.footer-menu{
+	color: #ffffff;
+	font-size: 13px;
+	list-style: 18px;
+}
+
+.footer-menu .menu-left li,
+.footer-menu .menu-right li{
+	list-style: none;
+}
+
+.footer-menu ul{
+	display: inline-block;
+}
+
+
+.footer-copyright{ /*можно прописать данные свойства в след селекторе*/
+	color: #fefefe;
+	font-size:12px;
+	/*line-height: 18px;*/
+
+}
+.footer-copyright ul{
+	list-style: none;
+}
+
+.modal-windows{
+	background-color: darkblue; /*для тестирования*/
+}
+
+.modal { 
+	background-color: #f8f7f4;
+	color: #323232; /*!!!!цвет не меняется на темно-серый*/
+	font-size: 14px;
+	/*line-height: 16px;*/
+}
+
+/*стилизация модальных окон*/
+.modal{
+	background-color: #f8f7f4;
+	border-radius: 7px;
+}
+
+.modal-catalog{
+	width:142px;
+	height:auto;
+}
+
+.menu-catalog{
+	list-style: none;
+	color: #323232; /*!!!не работает стиль*/
+}
+
+.menu-catalog .catalog-article{
+	color: #323232;
+	font-weight: bold; /*!!!не работает стиль*/
+	line-height: 16px;
+}
+
+
+.modal-search{ /*не работают стили*/
+	padding:20px 15px; /*странное отображение отступов*/
+	width:340px;
+	height:auto; /*нужно ли делать высоту auto или же ширину?*/
+}
+
+#search{
+	width: 310px; /*как задать ширину поля поиска в px без id*/
+}
+
+.modal-login{
+	width:277px;
+	height:215px;
+	padding: 20px 16px;
+}
+
+.modal-login a{
+	color: #323232;
+	font-size: 13px;
+	line-height: 24px;
+	text-decoration:underline;
+}
+
+
+.modal-basket{
+	width: 540px;
+	height: auto;
+}
+
