@@ -2,25 +2,54 @@ body{
 	margin: 0px;
 	padding: 0px;
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 16px; /*18px*/
 	font-family: "Roboto", "Arial", sans-serif;
 	line-height: 22px;
-
-	/* Временно для сетки */ 
-  	background-image: url('img/index/temporariry-index-1200.jpg');
+	background-color:#849d8f;
+	color: #ffffff;
+	/* Для демонстрации */
+  	min-height: 100vh; 
+  	margin: 0;
+	/*url(../img/ice-1.png) center top no-repeat #849d8f;*/
+	
 }
 
-.inner-page{
-	background-color:#849d8f;
-	width: 1200px;
+.container {
+	width: 1146px;
 	margin: 0 auto;
-	padding: 24px 27px;
-	font-family: "Roboto", "Arial", sans-serif;
-	color: #ffffff;
- }
+	padding: 0 2.3%;
+    /* Временно для сетки   	background-image: url('../img/index/temporariry-index-1200.jpg');
+  	background-repeat: no-repeat;
+  	 background-size: 1200px auto;
+  	background-position: top center;
+  	background-repeat: no-repeat;*/
+}
 
-.visually-hidden{
-	display: none;
+.main-header {
+  /* Для демонстрации */
+  height: 110px;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 a{
@@ -28,72 +57,240 @@ a{
 	color: #ffffff;
 }
 
-button{ /*нужно ли задавать ширины для всех кнопок или же делать авто  и отступы?*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button{
 	color: #ffffff;
-	width: auto;
-	height: auto;
 	padding-top: ;
 	padding-bottom:; 
+	border: 0;
 }
 
 .main-header{
 	display: flex;
-	flex-wrap: wrap;
 	flex-direction: row;
-	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	/*	margin: 0;
+	padding: 0;*/
 }
 
 
-.header-user-navigation{
-	margin-left: 363px;
+/*Стили для главного меню*/
+.menu {
+ font-size: 16px;
+ line-height: 18px;
+ font-weight: bold;
 }
 
-
-.main-navigation{
-	font-size: 16px;
-	line-height: 18px;
-	/*width: 349px;
-	height: 15px;*/
+.main-menu {
+ /*width: 420px;*/
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -ms-flex-wrap: wrap;
+ flex-wrap: wrap;
+ padding-top: 5px;
+ //*padding-right: 18px;
+ padding-bottom: 5px;
+ padding-left: 0;
+ list-style: none;*/
 }
 
-.site-navigation,
-.user-navigation{
+.main-menu > li {
+	display: inline-block;
+ 	position: relative;
+	/*margin-right: 27px;*/
+	padding-bottom: 10px;
 	list-style: none;
-
 }
 
-.site-navigation li{
-	display: inline-block;
-	margin-right: 29px; /*стоит ли использовать отступ или нужно это дедать flex боксами?*/
+.main-menu > li > a {
+ display: block;
+ padding: 7px 14px;
+ /*padding-top: 7px;
+ padding-bottom: 7px;*/
+ border-radius: 15px;
+ /*text-decoration: none;
+ color: #ffffff;*/
 }
 
-.site-navigation li:last-child{
-	margin-right: 0px; 
+.main-menu > li > a[href]::after {
+ content: "";
+ display: block;
+ height: 1px;
+ background-color: rgba(255, 255, 255, 0.2);
 }
 
-.user-navigation li{
-	display: inline-block;
-	margin-right: 9px; /*стоит ли использовать отступ или нужно это дедать flex боксами?*/
+.main-menu > li:hover > a,
+.main-menu > li:focus > a {
+ background-color: #f7f6f3;
+ color: #333333;
 }
 
-.user-navigation li:last-child{
-	display: inline-block;
-	margin-right: 0px; 
+.main-menu > li > a:active {
+ background-color: #ededed;
+ -webkit-box-shadow: inset 0 2px 1px #696969;
+ box-shadow: inset 0 2px 1px #696969;
+}
+
+.main-menu a:not([href]) {
+ background-color: #d07058;
+ cursor: pointer;
+}
+
+.sub-menu {
+	list-style: none;
+	position: absolute;
+	top: 40px;
+	left: -5px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: normal;
+	background-color: #f8f7f4;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+	display: none;
+	z-index: 10;
+	width: 145px;
+	margin: 0;
+	padding: 0;
+}
+
+.sub-menu .catalog-sub .new{
+	font-weight: bold;
+}
+
+.main-menu > li:hover .sub-menu {
+	display: block;
+}
+
+.sub-menu li a {
+	font-size: 14px;
+	line-height: 16px;
+	display: block;
+	white-space: nowrap; /*для чего???*/
+	padding: 10px 20px;
+	color: #323232;
+	text-decoration: none;
+}
+
+/*.sub-menu li{
+	padding:5px 0;
+}*/
+
+.sub-menu li:first-of-type {
+ position: relative;
+}
+
+.sub-menu li:first-of-type::after {
+ position: absolute;
+ content: "";
+ display: block;
+ right: 6px;
+ left: 6px;
+ height: 1px;
+ background-color: rgba(53, 53, 53, 0.2);
+}
+
+.sub-menu a:hover,
+.sub-menu a:focus {
+ background-color: #fbded7;
+}
+
+.sub-menu li:first-of-type a:hover,
+.sub-menu li:first-of-type a:focus {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+}
+
+.sub-menu li:last-of-type a:hover,
+.sub-menu li:last-of-type a:focus {
+ border-bottom-left-radius: 5px;
+ border-bottom-right-radius: 5px;
+}
+
+.sub-menu a:active {
+ background-color: #f6b5a5;
+}
+
+.sub-menu li:first-of-type a:active {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+}
+
+.sub-menu li:last-of-type a:active {
+ border-bottom-left-radius: 5px;
+ border-bottom-right-radius: 5px;
+}
+
+.sub-menu a:not([href]) {
+ background-color: #d07058;
+ color: #ffffff;
 }
 
 /*стиль для навигац. кнопок в хедере */
-.user {
+.header-user-menu{
+	/*margin-left: 220px;*/
+}
+
+.user-menu{
+	font-size: 16px;
+	line-height: 18px;
+	list-style: none; 
+	border: 1px solid black/*delete*/
+	padding:0;
+	margin-left:148px; 
+}
+
+.user-menu li{
+	display: inline-block;
+}
+
+.user-menu .btn{
+	display: inline-block;
+	margin-left:9px;
 	background-color: #a2b8ac;
 	-moz-border-radius:  15px; /* Firefox */
 	-webkit-border-radius:  15px; /* Safari 4 */
-	border-radius:  15px; /* IE 9, Safari 5, Chrome */
-	padding:6px 8px;
-	/*display: none;*/
+	border-radius: 17px; /* IE 9, Safari 5, Chrome */
+}
+
+.search{
+	padding: 6px 8px;
+}
+
+.search a{
+	display: block;
+}
+
+.login{
+	padding: 6px 15px 6px 15px;
+}
+
+.login a{
+	display: block;
+}
+
+.basket{
+	padding: 6px 34px 6px 16px;
+}
+
+.basket a{
+	display: block;
+}
+
+.user-menu span{ /*не работает*/
+	padding-left: 8px;
 }
 
 .mode-wrapper{
-	justify-content:flex-end;
-	margin-left:auto;
+	margin-left: 977px;
+	text-align: right;
 }
 
 .mode-wrapper .mode{ /*как приэать блок к правому краю*/
@@ -108,54 +305,228 @@ button{ /*нужно ли задавать ширины для всех кноп
 }
 
 
-.container-carousel{
-	font-size: 60px;
-	line-height: 60.35px;
-	font-weight: bold;
+.inner-page{
+	margin: 0 auto;
+	border: 1px solid red; /*удалить*/
 }
 
-.container-cauresel a{
-	font-size: 32px;
-	/*line-height: 44px;*/
+
+/*SLIDES*/
+.site-wrapper {
+  min-width: 940px;
+  background-color: #849d8f;
+  background-image: url("..//img/index/slider-item1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+  /* Для демонстрации */
+  min-height: 100vh;
 }
 
-.banners h3{
-	font-size: 35px;
-	/*line-height: 41px;*/
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+
+  visibility: hidden;
 }
 
-.banners p{
-	font-size: 18px;
-	/*line-height: 22px;*/
+.site-wrapper::before {
+  background-image: url("..//img/index//slider-item2.png");
 }
+
+.site-wrapper::after {
+  background-image: url("..//img/index//slider-item3.png");
+}
+
+.slider {
+  position: relative;
+  
+  padding-top: 321px; /*321px???*/
+  
+  text-align: center;
+  color: #ffffff;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.slide-title {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+  
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
+}
+
+
+.button {
+  display: inline-block;
+  padding: 12px 44px;
+
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: top; /*for what?*/
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 50px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.button:active {
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 63px; /*distance utill banners*/
+  left: 0;
+  z-index: 20;
+  font-size: 0;
+}
+
+
+.visually-hidden { /*to hide the radiobuttons*/
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+.slide {
+  display: none;
+}
+
+#product-1:checked ~ .site-wrapper #slide1,
+#product-2:checked ~ .site-wrapper #slide2,
+#product-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+}
+
+#product-1:checked ~ .site-wrapper label[for="product-1"],
+#product-2:checked ~ .site-wrapper label[for="product-2"],
+#product-3:checked ~ .site-wrapper label[for="product-3"] {
+  background-color: #ffffff;
+}
+
+#product-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("..//img/index/slider-item1.png");
+}
+
+#product-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("..//img/index/slider-item2.png");
+}
+
+#product-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("..//img/index/slider-item3.png");
+}
+
+/*BANNERS*/
+.banner-wrapper{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/*align-items: flex-start; */
+	margin-bottom: 38px;
+}
+
+.banner{
+	border-radius: 15px;
+	padding: 20px 25px; /*with horizontal padding 25px the background moved ????*/
+	width: 560px;
+	/*min-height: 230px;*/ /*shouls I set the min-height???*/
+}
+
 
 .banner-left{
-	
+	margin:0;
+	background: url(..//img/index/banner-left.jpg) center;
 }
 
 .banner-right{
+	background: url(..//img/index/banner-right.jpg) center;
+	margin-left:25px;
+}
+
+.banner h3{
+	font-size: 35px;
+	margin-top: 0;
+	margin-bottom: 25px;
+	/*line-height: 41px;*/ /*with line-height the background is moving ???*/
+}
+
+.banner p{
+	font-size: 18px;
+	line-height: 22px;
+	margin-top: 0;
+	margin-bottom: 48px;
+	/*font-weight: bold;*/
+}
+
+.banner .button{
+	display: block;
+	font-size: 18px;
+	line-height: 24px;
+	background-color: #f06541;
+	border-radius: 25px;
+	padding: 12px 20px;
+	margin-left: auto;
+	font-weight: bold;
 	
 }
 
-/*стиль для красных ссылок-кнопок*/
-.button{
-	background-color: #f06541;
-	border-radius: 30px;
-	padding:10px 20px; /*замерить точнее*/
-	width:auto;
-	height:auto;
-
+.banner-left .button{
+	width: 125px;
 }
 
-.banners a{
-	font-size: 18px;
-	/*line-height: 24px;*/
+.banner-right .button{
+	width: 150px;
 }
+
+
+
 
 
 .conteiner-price{
 	font-size: 45px;
-	//*line-height: 45px;*/
+	margin: 0;
 }
 
 .conteiner-price span{
@@ -163,27 +534,198 @@ button{ /*нужно ли задавать ширины для всех кноп
 	/*line-height: 45px;*/
 }
 
-.hits-list h3{
-	font-size: 16px; /*также задано в body,но стиль не применяется*/
-	line-height: 22px; /*также задано в body, но стиль не применятся*/
+/*<a class="product" href="catalog-item.html"><img src="img/svg-gllacy/hit.svg" alt="Хит">
+url(..//img/index/hit-1.jpg)
+*/
+
+.hit-list-wrapper{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.conteiner-seo {
+
+.hit-preview{
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.hit-item{
+		width: 267px;
+}
+
+
+.hit-item-photo img{
+	border-radius: 50%
+}
+
+.hit-item-photo::before{
+	position: absolute;
+	content: '';
+	background-image: url("..//img/svg-gllacy/hit.svg");
+	width: 61px;
+    height: 61px;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+
+.hit-item-photo::after{
+	position: absolute;
+	content: 'ruble';
+	width: 26px;
+    height: 32px;
+	top: 220;
+	left: 82;
+	z-index: 10;
+}
+
+
+.hit-item-price{
+	position: absolute;
+	content: '';
+	top: 80;
+	left: 0;
+	z-index: 6;
+}
+
+.hit-item-block{
+	width: 267px;
+	min-height: 320px;
+}
+
+
+.hit-item-photo{
+	width: 267px;
+	height: 267px;
+}
+
+.hit-item-name{
+	margin: 20px 0 40px 0;
+}
+
+
+
+
+.container-seo{
+	position: relative;
+	background-image: url("..//img/index/waffle.jpg");
+	border-radius: 15px;
+	color: #323232; 
+	font-size: 16px;
+	line-height:22px;
+	margin: 0;
+	margin-bottom: 35px;
+	padding: 30px 33px 30px 20px;
+}
+
+.container-seo-flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
 	color: #323232;
 	font-size: 16px;
 	line-height: 22px;
+	padding-left:58px;
 }
 
-.seo{
+.seo-caption{
 	font-size: 24px;
-	line-height:30px;
+	line-height: 30px;
+	margin-top: 0;
 }
 
-.other-blog h3{
+.seo-item{
+	display: inline-block;
+	max-width:480px;
+	margin: 0;
+}
+
+.top{
+	margin-bottom: 30px;
+}
+
+.seo-item p{
+	margin: 0;
+}
+
+.seo-item .top-1::before{ /*doesnt work*/
+	position: absolute;
+	justify-content: '';
+	background-image: url("..//img/svg-gllacy/ice-cream.svg");
+	background-repeat: no-repeat;
+	width: 50px;
+	height:50px;
+	top:50;
+	left:20;
+	z-index: 10;
+}
+
+
+.other-flex{
+	display: flex;
+	flex-direction: row;;
+	justify-content: space-between;
+	border: 1px solid black;
+	margin-bottom: 35px;
+}
+
+.other{
+	width: 560px;
+	min-height: 220px;
+	border: 1px solid black;
+	border-radius: 15px;
+}
+
+.blog{
+	margin-right: 25px;
+	background: url("..//img/index/blog-background.jpg") no-repeat 100% #ffffff;
+}
+
+.blog-inner{
+	color: #323232;	
+	margin: 25px 267px 83px 20px;
+	width: 282px;
+}
+
+.blog h3{
+	font-size: 16px;
+	line-height: 22px;
+	margin:0;
+	margin-bottom: 9px;
+}
+
+.blog a{
+	font-size: 24px;
+	line-height: 30px;
+	color: #323232;	
+	text-decoration: underline;
+}
+
+.delivery{
+	display: flex;
+	flex-direction: column;
+	justify-content:flex-start; 
+	background: repeating-linear-gradient(-45deg, #fe9e90 10px, #f8f7f4 10px, #92cdff 10px); /*?????*/
+
+}
+.delivery-inner{
+	/*background-color: #f8f7f4;*/
 	color: #323232;
 	font-size: 16px;
-	//*line-height: 22px;*/	
+	line-height: 22px;
+	padding: 37px 28px;
 }
+
+.delivery-inner p{
+	margin: 0;
+}
+
+/*
+
 
 .other-blog a{
 	color: #323232;
@@ -197,7 +739,7 @@ button{ /*нужно ли задавать ширины для всех кноп
 	color:#5a5a5a;
 	font-size: 16px;
 	line-height: 20px;
-}
+}*/
 
 .contact-block{ 
 	background-color:#fffffe;
@@ -258,12 +800,6 @@ button{ /*нужно ли задавать ширины для всех кноп
 	background-color: darkblue; /*для тестирования*/
 }
 
-.modal { 
-	background-color: #f8f7f4;
-	color: #323232; /*!!!!цвет не меняется на темно-серый*/
-	font-size: 14px;
-	/*line-height: 16px;*/
-}
 
 /*стилизация модальных окон*/
 .modal{
@@ -288,14 +824,22 @@ button{ /*нужно ли задавать ширины для всех кноп
 }
 
 
+/*задание вида поелй ввода мадальных окон*/
+.modal-windows .input{
+	height: 45px;
+	border-radius:5px;
+	border:1px solid #d3d3d2;
+}
+
 .modal-search{ /*не работают стили*/
-	padding:20px 15px; /*странное отображение отступов*/
+	padding:20px 15px; /*по юокам отсупы неверно отображаюься*/
 	width:340px;
 	height:auto; /*нужно ли делать высоту auto или же ширину?*/
 }
 
-#search{
-	width: 310px; /*как задать ширину поля поиска в px без id*/
+.email,
+.password{
+	width: 240px;
 }
 
 .modal-login{
