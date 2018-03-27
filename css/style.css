@@ -7,6 +7,7 @@ body{
 	line-height: 22px;
 	background-color:#849d8f;
 	color: #ffffff;
+	position: relative;
 	/* Для демонстрации */
   	min-height: 100vh; 
   	margin: 0;
@@ -251,6 +252,8 @@ img {
 /*user navigation*/
 .user-menu{
 	margin-left: auto;
+	position: relative;
+	z-index: 0;
 }
 
 .user-menu-list{
@@ -274,6 +277,13 @@ img {
 
 .user-menu-list .btn:first-child{
 	margin-left:0px;
+}
+
+/*users button*/
+.btn a:hover,
+.btn:hover{
+	background-color: #f8f7f4;
+	color: #373737;
 }
 
 
@@ -317,6 +327,25 @@ img {
 }
 
 
+.loupe a:hover{ 
+	background-image: url("..//img/svg-gllacy/loupe-black.svg");
+	background-position: center ;
+	background-repeat: no-repeat;
+}
+
+.search a:hover{ 
+	background: url("..//img/svg-gllacy/loupe-black.svg") 17px 7px no-repeat;
+}
+
+.login a:hover{ 
+	background: url("..//img/svg-gllacy/entrance.svg") 17px 7px no-repeat;
+}
+
+.basket a:hover{ 
+	background: url("..//img/svg-gllacy/basket-red.svg") 17px 7px no-repeat;
+}
+
+
 .basket a {
 	display: block;
     font-weight: 500;
@@ -345,248 +374,26 @@ img {
 	padding-top: 5px;
 }
 
-
-
-
-/*
-.main-header{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	flex-wrap: wrap;
-
+.modal-search{
+    position: absolute;
+    top: 37px;
+    right: 0;
+    z-index: 10;
+    display: block; /*none*/
+    width: 345px;
+    max-height: 85px;
+    padding: 20px 15px;
+    background-color: #f8f7f4;
+    border-radius: 5px;
+    box-sizing: border-box;
+    z-index: 3;
 }
 
-
-.menu {
- font-size: 16px;
- line-height: 18px;
- font-weight: bold;
+.input-search {
+    font-size: 14px;
+    line-height: 24px;
+    box-sizing: border-box;
 }
-
-.main-menu {
-
- display: -webkit-box;
- display: -ms-flexbox;
- display: flex;
- -ms-flex-wrap: wrap;
- flex-wrap: wrap;
- padding-top: 5px;
-}
-
-.main-menu > li {
-	display: inline-block;
- 	position: relative;
-	padding-bottom: 10px;
-	list-style: none;
-}
-
-.main-menu > li > a {
- display: block;
- padding: 7px 14px;
-
- border-radius: 15px;
-
-}
-
-.main-menu > li > a[href]::after {
- content: "";
- display: block;
- height: 1px;
- background-color: rgba(255, 255, 255, 0.2);
-}
-
-.main-menu > li:hover > a,
-.main-menu > li:focus > a {
- background-color: #f7f6f3;
- color: #333333;
-}
-
-.main-menu > li > a:active {
- background-color: #ededed;
- -webkit-box-shadow: inset 0 2px 1px #696969;
- box-shadow: inset 0 2px 1px #696969;
-}
-
-.main-menu a:not([href]) {
- background-color: #d07058;
- cursor: pointer;
-}
-
-.sub-menu {
-	list-style: none;
-	position: absolute;
-	top: 40px;
-	left: -5px;
-	font-size: 14px;
-	line-height: 16px;
-	font-weight: normal;
-	background-color: #f8f7f4;
-	border-radius: 5px;
-	-webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-	display: none;
-	z-index: 10;
-	width: 145px;
-	margin: 0;
-	padding: 0;
-}
-
-.sub-menu .catalog-sub .new{
-	font-weight: bold;
-}
-
-.main-menu > li:hover .sub-menu {
-	display: block;
-}
-
-.sub-menu li a {
-	font-size: 14px;
-	line-height: 16px;
-	display: block;
-	white-space: nowrap; 
-	padding: 10px 20px;
-	color: #323232;
-	text-decoration: none;
-}
-
-
-.sub-menu li:first-of-type {
- position: relative;
-}
-
-.sub-menu li:first-of-type::after {
- position: absolute;
- content: "";
- display: block;
- right: 6px;
- left: 6px;
- height: 1px;
- background-color: rgba(53, 53, 53, 0.2);
-}
-
-.sub-menu a:hover,
-.sub-menu a:focus {
- background-color: #fbded7;
-}
-
-.sub-menu li:first-of-type a:hover,
-.sub-menu li:first-of-type a:focus {
- border-top-left-radius: 5px;
- border-top-right-radius: 5px;
-}
-
-.sub-menu li:last-of-type a:hover,
-.sub-menu li:last-of-type a:focus {
- border-bottom-left-radius: 5px;
- border-bottom-right-radius: 5px;
-}
-
-.sub-menu a:active {
- background-color: #f6b5a5;
-}
-
-.sub-menu li:first-of-type a:active {
- border-top-left-radius: 5px;
- border-top-right-radius: 5px;
-}
-
-.sub-menu li:last-of-type a:active {
- border-bottom-left-radius: 5px;
- border-bottom-right-radius: 5px;
-}
-
-.sub-menu a:not([href]) {
- background-color: #d07058;
- color: #ffffff;
-}
-
-
-.header-user-menu{
-	
-}
-
-.user-menu{
-	font-size: 16px;
-	line-height: 18px;
-	list-style: none; 
-	border: 1px solid black;
-	padding:0;
-	margin-left:148px; 
-}
-
-.user-menu li{
-	display: inline-block;
-}
-
-.user-menu .btn{
-	display: inline-block;
-	margin-left:9px;
-	background-color: #a2b8ac;
-	-moz-border-radius:  15px; 
-	-webkit-border-radius:  15px; 
-	border-radius: 17px;
-}
-
-.search{
-	padding: 6px 8px;
-}
-
-.search a{
-	display: block;
-}
-
-.login{
-	padding: 6px 15px 6px 15px;
-}
-
-.login a{
-	display: block;
-}
-
-.basket{
-	padding: 6px 34px 6px 16px;
-}
-
-.basket a{
-	display: block;
-}
-
-.user-menu span{ 
-	padding-left: 8px;
-}
-
-.mode-wrapper{
-	margin-left: 977px;
-	text-align: right;
-}
-
-.mode-wrapper .mode{ 
-	font-size: 14px;
-	line-height: 16px;
-}
-
-.mode-wrapper span{
-	font-size: 22px;
-	line-height: 24px;
-	font-weight: bold;
-}
-
-
-.inner-page{
-	margin: 0 auto;
-	border: 1px solid red; 
-}
-*/
-
-
-
-
-
-
-
-
-
 
 
 
@@ -899,8 +706,9 @@ img {
 
 
 .hit-item-name{
+	display: inline-block;
 	font-family: "Roboto medium", "Arial", sans-serif;
-	text-align: center; /* ??? */
+	text-align: center; 
 	margin: 0;
 	font-weight: normal;
 	border-bottom: 1px solid #9db1a5; 
@@ -908,8 +716,9 @@ img {
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: 400;
+	z-index: 2;
+	position: absolute;
 }
-
 
 .overlay{
 	position: absolute;
@@ -927,6 +736,11 @@ img {
     max-height: 405px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
+
+.hit-item-name:hover{  /* !!!! doesnt work */
+	color: #ffbc9e;
+}
+
 
 .hit-item-block:hover .overlay{ 
 	display: block;
@@ -951,10 +765,6 @@ img {
 .hit-item-block:hover{
 	position: relative; 
 	z-index: 10;
-}
-
-.hit-item-name:hover{  /* !!!! doesnt work */
-	color: #ffbc9e;
 }
 
 
@@ -1391,6 +1201,28 @@ img {
 }
 
 
+.social-button{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	border: 3px solid #c2cec7;
+	border-radius: 50%;
+	opacity: 0.8;
+}
+
+
+.social-button:hover {
+	opacity: 1;
+}
+
+
+.social-button:active,
+.social-button:focus {
+	background-color:#e9e9e9
+	border-color: #dae2de;
+}
+
+
 .footer-menu-flex{
 	display: flex;
 	flex-wrap: wrap;
@@ -1439,6 +1271,12 @@ img {
 }
 
 
+.footer-menu a:hover,
+.footer-menu a:active{
+	color: #ffbc9e;
+}
+
+
 .footer-menu-flex span{
 	border-bottom:1.2px solid #9db1a5; 
 }
@@ -1484,15 +1322,213 @@ img {
 	list-style: none;
 }
 
-.modal-windows{
-	background-color: darkblue; /*для тестирования*/
-}
-*/
 
-/*стилизация модальных окон*/
+
+
+/*MODAL WINDOWS*/
+.modal-overlay {  /*не работает*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+}
+
+.feedback-overlay{
+	display: block;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal{
-	background-color: #f8f7f4;
-	border-radius: 7px;
+    position: fixed;
+    display: none; /*block */
+    background-color: #f8f7f4;
+    border-radius: 7px;
+
+}
+
+/*Feedback modal window*/
+.modal-feedback-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-feedback{
+	box-sizing: border-box;
+	width: 480px;
+    max-height:442;
+    margin-left: -215px;
+    padding: 20px 26px 26px 26px;
+
+    top: 100px; /* PhotoShops value- 337px; ????*/
+    left: 50%;
+    z-index: 20;
+
+}
+
+.feedback-form-box{
+	width: 428px;
+	max-height:357px;
+
+}
+
+.modal-login-form{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	max-height:357px;
+}
+
+
+.feedback-label{
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
+.modal input{
+	width: 100%;
+	min-height: 44px;
+	border-radius:5px;
+	border:1px solid #d3d3d2;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 200; /*?*/
+	color: #999999;
+	margin-bottom: 22px;
+	padding: 0 20px;
+	width: 270px;
+}
+
+.modal-feedback h2{
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 200; /*?*/
+	color: #323232;
+	margin: 0;
+	margin-bottom: 25px;
+}
+
+.modal textarea{
+	width: 430px;
+	max-height: 155px;
+	box-sizing: border-box;
+	border-radius:5px;
+	border:1px solid #d3d3d2;
+	font-size: 16px;
+	line-height: 24px;
+	color: #999999;
+	margin-bottom: 25px;
+	padding:17px 20px;
+	resize: none;
+}
+
+
+.modal-feedback-close {
+	position: absolute;
+  	top: 16px;
+  	right: 16px;
+
+  	width: 18px;
+  	height: 18px;
+
+  	font-size: 0;
+
+  	border: 0;
+
+  	cursor: pointer;
+
+  	background-color: #f8f7f4;
+}
+
+.modal-feedback-close::before,
+.modal-feedback-close::after {
+  content: "";
+
+  position: absolute;
+  top:8px;
+  right: 0;
+
+  width: 18px;
+  height: 3px;
+
+  background-color: #231f20;
+}
+
+.modal-feedback-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-feedback-close::after {
+  transform: rotate(-45deg);
+}
+
+.feedback-submit{
+	display: block;
+	margin-left:290px;
+	width:140px;
+	max-height: 46px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700px;
+	padding: 10px 33px 15px 25px;
+	box-sizing: border-box;
+}
+
+
+.feedback-label input:hover,
+.feedback-label textarea:hover{
+  border: 2px solid #c7c6c5;
+}
+
+.feedback-label input:active,
+.feedback-label textarea:active {
+  border-color: 2px solid #8fbdec;
 }
 
 .modal-catalog{
@@ -1509,43 +1545,5 @@ img {
 	color: #323232;
 	font-weight: bold; /*!!!не работает стиль*/
 	line-height: 16px;
-}
-
-
-/*задание вида поелй ввода мадальных окон*/
-.modal-windows .input{
-	height: 45px;
-	border-radius:5px;
-	border:1px solid #d3d3d2;
-}
-
-.modal-search{ /*не работают стили*/
-	padding:20px 15px; /*по юокам отсупы неверно отображаюься*/
-	width:340px;
-	height:auto; /*нужно ли делать высоту auto или же ширину?*/
-}
-
-.email,
-.password{
-	width: 240px;
-}
-
-.modal-login{
-	width:277px;
-	height:215px;
-	padding: 20px 16px;
-}
-
-.modal-login a{
-	color: #323232;
-	font-size: 13px;
-	line-height: 24px;
-	text-decoration:underline;
-}
-
-
-.modal-basket{
-	width: 540px;
-	height: auto;
 }
 
