@@ -2,7 +2,7 @@
   var feedback = document.querySelector(".feedback-submit");
   
   var popup = document.querySelector(".modal-feedback-show");
-  var close = popup.querySelector(".odal-feedback--close");
+  var close = popup.querySelector(".odal-feedback-close");
   
   var form = popup.querySelector("modal-login-form");
   var login = popup.querySelector("[name=login]");
@@ -18,7 +18,7 @@
     isStorageSupport = false;
   }
   
-  link.addEventListener("click", function (evt) {
+  feedback.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-feedback-show");
     
@@ -36,16 +36,16 @@
   close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-feedback-show");
-    popup.classList.remove("modal-error");
+    popup.classList.remove("modal-feedback-error");
   });
   
   form.addEventListener("submit", function (evt) {
     if (!login.value || !email.value || !comment.value) {
       evt.preventDefault();
       //console.log("Нужно ввести имя и электронную почту и написать нам что-нибудь");
-      popup.classList.remove("modal-error");
+      popup.classList.remove("modal-feedback-error");
       popup.offsetWidth = popup.offsetWidth;
-      popup.classList.add("modal-error");
+      popup.classList.add("modal-feedback-error");
     } else {
       if (isStorageSupport) {
         localStorage.setItem("login", login.value); 
@@ -59,7 +59,7 @@
       evt.preventDefault();
       if (popup.classList.contains("modal-feedback-show")) {
         popup.classList.remove("modal-feedback-show");
-        popup.classList.remove("modal-error");
+        popup.classList.remove("modal-feedback-error");
       }
     }
   });

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<link href="css/normalize.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/scripts.js"></script>
+	<script src="js/scripts.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
 	<title>GllacyShop</title>
 </head>
@@ -46,9 +46,10 @@
 														<label for="search" class="visually-hidden">Поиск</label> 
 														<input class="input-search" id="search" type="text" name="search" placeholder="Что ищем?"><img src="img/svg-gllacy/loupe.svg" alt="Поиск">
 													</form>
+												</div>	
 										</li>
 										<li class="btn login"><a href="#">Вход</a></li>
-										<li class="btn basket"><a href="#">Пусто</li>
+										<li class="btn basket"><a href="#">Пусто</a></li>
 									</ul>
 							</nav>
 						</div>
@@ -112,6 +113,7 @@
 					<h2 class="visually-hidden">Хиты продаж</h2>
 					<!--1st item-->
 					<article class="hit-item-block">
+					<h2 class="visually-hidden">Первый хит продаж</h2>
 						<div class="hit-preview">
 							<div class="hit-item-photo">
 								<img src="img/item1_orange_hit1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -127,6 +129,7 @@
 					</article> 
 					<!--2nd item-->
 					<article class="hit-item-block">
+					<h2 class="visually-hidden">Второй хит продаж</h2>
 						<div class="hit-preview">
 							<div class="hit-item-photo">
 								<img src="img/item2_coffe_chocolate_hit2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
@@ -142,6 +145,7 @@
 					</article>
 					<!--3rd item-->
 					<article class="hit-item-block">
+					<h2 class="visually-hidden">Третий хит продаж</h2>
 						<div class="hit-preview">
 							<div class="hit-item-photo">
 								<img src="img/item3_strawberry_white_chocolate_hit3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
@@ -157,6 +161,7 @@
 					</article>
 					<!--4th item-->
 					<article class="hit-item-block">
+					<h2 class="visually-hidden">Четвертый хит продаж</h2>
 						<div class="hit-preview">
 							<div class="hit-item-photo">
 								<img src="img/item4_creme_brulee_hit4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливко">
@@ -216,14 +221,12 @@
 				<!--2.6 Карта, адрес и контакты-->
 				<section class="map-container">	
 					<div class="map-image">
-						<a href="https://yandex.ru/map-widget/v1/-/CBazqBwqcD" height="429"">
 							<img src="img/map.jpg" width="1200" height="430" alt="Адрес: ул.Большая Конюшенная 19/8, Санкт-Петербург"> 
 						</a>
 						<div class="location-icon">
 								<img src="img/svg-gllacy/pin.svg" width="80" height="240" alt="Месторасположение на карте - ул.Большая Конюшенная 19/8">
 						</div>
 					</div>
-
 					<div class="map-contacts">
 						<div class="map-contacts-info">
 							<h3 class="visually-hidden">Контакты</h3>
@@ -281,21 +284,19 @@
 				</div>
 				<div class="footer-copyright">
 					<h2 class="visually-hidden">Copyright</h2>
-						<a href="https://htmlacademy.ru/intensive"><img src="img/svg-gllacy/logo-htmlacademy.svg" width="108" height="38" alt="Логотип HTML Academy"></a>
+						<a href="https://htmlacademy.ru/intensive">
+							<img src="img/svg-gllacy/logo-htmlacademy.svg" width="108" height="38" alt="Логотип HTML Academy">
+						</a>
 						<p>Сделано в HTML Academy © 2017</p>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</footer>
-		</div>	
-	</div>	
-</body>	
+	
 		<!--***MODAL WINDOWS***-->
 		<!--***Feedback modal window***-->
 		<section class="modal modal-feedback">
-				<button class="modal-feedback-close" type="button">Закрыть</button>
-				<h2>Мы обязательно вам ответим!</h2>
+			<button class="modal-feedback-close" type="button">Закрыть</button>
+			<h2>Мы обязательно вам ответим!</h2>
 				<div class="feedback-form-box">
 					<form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
 		        <label class="feedback-label">
@@ -309,10 +310,12 @@
 		        </label>
 		        <button class="button feedback-submit" type="button">Отправить</button>
 		      </form>
-		     </div> 
+		    </div> 
 	      <div class="modal-overlay feedback-overlay"></div>
 		</section>
-
+	</div>	
+</body>
+</html>
 
 
 
@@ -395,6 +398,4 @@
 		        	</table>
 		        		<button class="button" type="submit">Оформить заказ</button>
 		        </form>  
-		    </div> -->
-		  </div>  
-</html>
+		    </div> -->  
