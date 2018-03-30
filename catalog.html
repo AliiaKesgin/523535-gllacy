@@ -145,74 +145,118 @@
                   </li> 
                 </ul>
               <!-- </nav>  -->
-		<h2 class="page-title">Сливочное мороженое</h2>
+    <h2 class="page-title">Сливочное мороженое</h2>
 
     <!--2.2.Сортировка товаров-->
-		<section class="filters">
-    <h3 class="visually-hidden">Сортировка товаров</h3> <!--Скрытый заголовок-->
+    <section class="filters">
+    <h3 class="visually-hidden">Сортировка товаров</h3> 
         <form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
+          <div class="filters-flex">
+            <div class="filters-top">
+              <!--2.2.1.Тип сортировки-->
+              <div class="sorting by-popularity">
+                <h2 class="visually-hidden">Выбор типа сортировки</h2> 
+                <h2 class="filter-label label-popularity">Сортировка:</h2>
+                <label for="sorting-filter" class="visually-hidden">Сортировка:</label>
+                  <select id="sorting-filter" name="sorting">
+                    <option selected value="popular">По популярности</option>
+                    <option value="name">По наименованию</option>
+                    <option value="price">По цене</option>
+                  </select>
+              </div>
 
-          <!--2.2.1.Тип сортировки-->
-          <div class="sorting by-popularity">
-            <h2 class="visually-hidden">Выбор типа сортировки</h2> <!--Скрытый заголовок-->
-            <h2 class="fillers-label">Сортировка:</h2>
-            <label for="sorting-filter" class="visually-hidden">Сортировка:</label>
-              <select id="sorting-filter" name="sorting">
-                <option selected value="popular">По популярности</option>
-                <option value="name">По наименованию</option>
-                <option value="price">По цене</option>
-              </select>
-          </div>
+              <!--2.2.2.Выбор ценового диапазона-->
+              <div class="sorting by-price">
+                <h2 class="visually-hidden">Выбор ценового диапазона</h2> 
+                <h2 class="filter-label label-price">Цена: 100 руб. - 500 руб.</h2>
+                <label for="price-filter" class="visually-hidden">Цена: 100 руб. - 500 руб.</label>
+                <div class="price-range-box">
+                  <input id="price-filter" type="range" name="price" min="100" max="500" step="10"> <!--Как оформить двойной ползунок????-->
+                </div>  
+              </div>
 
-          <!--2.2.2.Выбор ценового диапазона-->
-          <div class="sorting by-price">
-            <h2 class="visually-hidden">Выбор ценового диапазона</h2> <!--Скрытый заголовок-->
-            <h2 class="fillers-label">Цена: 100 руб. - 500 руб.</h2>
-            <label for="price-filter" class="visually-hidden">Цена: 100 руб. - 500 руб.</label>
-            <div class="price-range-box">
-              <input id="price-filter" type="range" name="price" min="100" max="500" step="10"> <!--Как оформить двойной ползунок????-->
+              <!--2.2.2.Выбор жирности мороженого-->
+              <div class="sorting by-fat"> <!--нужны ли лейблы к каждой радиокнопке???-->
+                <h2 class="visually-hidden">Выбор жирности мороженого</h2>
+                <h2 class="filter-label label-fat">Жирность:</h2>
+                  <div class="fat-inputs-box">
+
+                    <label class="fat-filter-radio">
+                      <input class="visually-hidden" type="radio" name="fat-percent" value="0%">
+                      <span class="radio-indicator"></span>
+                      0%
+                    </label>   
+
+                    <label class="fat-filter-radio">
+                      <input class="visually-hidden" type="radio" name="fat-percent" value="less-10%">
+                      <span class="radio-indicator"></span>
+                      до 10%
+                    </label>  
+
+                    <label class="fat-filter-radio">
+                      <input class="visually-hidden" type="radio" name="fat-percent" value="less-30%">
+                      <span class="radio-indicator"></span>
+                      до 30%
+                    </label>  
+
+                    <label class="fat-filter-radio">
+                      <input class="visually-hidden" type="radio" name="fat-percent" value="more-30%%">
+                      <span class="radio-indicator"></span>
+                      выше 30%
+                    </label>  
+
+                  </div>    
+              </div>
+
             </div>  
-          </div>
 
-          <!--2.2.2.Выбор жирности мороженого-->
-          <div class="sorting by-fat"> <!--нужны ли лейблы к каждой радиокнопке???-->
-            <h2 class="visually-hidden">Выбор жирности мороженого</h2> <!--Скрытый заголовок-->
-            <h2 class="fillers-label">Жирность:</h2>
-              <div class="fat-inputs-box">
-                <label for="zero-fat" class="visually-hidden">0% жирности</label> <!--Скрытый заголовок-->
-                  <input id="zero-fat" type="radio" name="fat-percent" value="0%">0%
-                <label for="less-10" class="visually-hidden">Жирность менее 10%</label>   <!--Скрытый заголовок-->
-                  <input id="less-10" type="radio" name="fat-percent" value="less-10%" checked="">до 10%
-                  <label for="less-30" class="visually-hidden">Жирность менее 30%</label> <!--Скрытый заголовок-->
-                  <input id="less-30" type="radio" name="fat-percent" value="less-30%">до 30%
-                <label for="more-30" class="visually-hidden">Жирность более 30%</label> <!--Скрытый заголовок-->
-                  <input id="more-30" type="radio" name="fat-percent" value="more-30%">выше 30%
-              </div>    
-          </div>
 
-          <!--2.2.3.Выбор наполнителя-->
-          <div class="sorting by-fillers">
-            <h2 class="visually-hidden">Выбор наполнителя к мороженому</h2> <!--Скрытый заголовок-->
-            <h3 class="fillers-label">Наполнители:</h3>
-              <div class="fillers-inputs-box">
-                <label for="chocolate" class="visually-hidden"></label>
-                  <input id="chocolate" type="checkbox" name="fillers-select" value="chocolate" checked="">шоколадные
-                <label for="sugar" class="visually-hidden"></label>
-                  <input id="sugar" type="checkbox" name="fillers-select" value="sugar" checked="">сахарные присыпки
-                <label for="fruits" class="visually-hidden"></label>
-                  <input id="fruits" type="checkbox" name="fillers-select" value="fruits">фрукты
-                <label for="syrup" class="visually-hidden"></label>
-                  <input id="syrup" type="checkbox" name="fillers-select" value="syrup">сиропы
-                <label for="jam" class="visually-hidden"></label>  
-                  <input id="jam" type="checkbox" name="fillers-select" value="jam">джемы
-              </div>    
-          </div>
+            <div class="filters-bottom">
+            <!--2.2.3.Выбор наполнителя-->
+            <div class="sorting by-fillers">
+              <h2 class="visually-hidden">Выбор наполнителя к мороженому</h2>
+              <h3 class="filter-label label-fat">Наполнители:</h3>
+                <div class="fillers-inputs-box">
+                  <label class="filler-filter-checkbox">
+                    <input class="visually-hidden" type="filler-checkbox" name="fillers-checkbox" value="chocolate" checked="">
+                    <span class="checkbox-indicator"></span>
+                    шоколадные
+                  </label>  
 
-          <div class="sorting sorting-submit">
-            <button type="submit">Применить</button>
-          </div>
+                  <label class="filler-filter-checkbox">
+                    <input class="visually-hidden" type="filler-checkbox" name="fillers-checkbox" value="sugar" checked="">
+                    <span class="checkbox-indicator"></span>
+                    сахарные присыпки
+                  </label>  
+
+                  <label class="filler-filter-checkbox">
+                    <input class="visually-hidden" type="filler-checkbox" name="fillers-checkbox" value="fruits" checked="">
+                    <span class="checkbox-indicator"></span>
+                    фрукты
+                  </label>  
+
+                  <label class="filler-filter-checkbox">
+                    <input class="visually-hidden" type="filler-checkbox" name="fillers-checkbox" value="syrup" checked="">
+                    <span class="checkbox-indicator"></span>
+                    сиропы
+                  </label>  
+                  
+                  <label class="filler-filter-checkbox">
+                    <input class="visually-hidden" type="filler-checkbox" name="fillers-checkbox" value="jam" checked="">
+                    <span class="checkbox-indicator"></span>
+                    джемы
+                  </label> 
+                </div>    
+            </div>
+
+            <div class="sorting sorting-submit">
+              <button type="submit">Применить</button>
+            </div>
+
+          </div>  
 
         </form>
+      </div>  
     </section>
 
     <!--2.3.Каталог товаров-->
