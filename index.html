@@ -39,33 +39,33 @@
 								<h2 class="visually-hidden">Навигация по сайту для пользователя</h2>
 									<ul class="user-menu-list">
 										<li class="btn search">
-											<a href="#">Поиск</a>
-												<div class="window window-search">
-													<form name="search" action="https://echo.htmlacademy.ru" method="get">
-														<label for="search" class="visually-hidden">Поиск</label>
-														<input class="input-search" id="search" type="text" name="search" placeholder="Что ищем?"><img src="img/svg-gllacy/loupe.svg" alt="Поиск">
-													</form>
-												</div>
+											<div class="search-wrapper">
+												<a href="#">Поиск</a>
+													<div class="window window-search">
+														<form name="search" action="https://echo.htmlacademy.ru" method="get">
+															<label for="search" class="visually-hidden">Поиск</label>
+															<input class="input-search" id="search" type="text" name="search" placeholder="Что ищем?">
+														</form>
+													</div>
+											</div>
 										</li>
 										<li class="btn login">
-											<a href="#">Вход</a>
-												<div class="window window-login">
-										            <form class="window-login-form" id="login-form" action="https://echo.htmlacademy.ru" method="post">
-										                <input class="input-email" type="email" name="email" placeholder="Электронная почта">
-										                <input class="input-password" type="password" name="password" placeholder="Пароль">
-
-										                <div class="button-links-flex">
-										                	<div class="button-left">
-											                	<button class="button button-submit" type="submit">Войти</button>
-											            	</div>	
-											            	<div class="links-right">
-											                  <a class="login-form-link" href="#">Забыли пароль?</a>
-											                  <a class="login-form-link" href="#">Новая регистрация</a>
-											                </div>
-											            </div>    
-
-										            </form>
-										        </div>
+												<div class="login-wrapper" tabindex="0">
+													<a href="#">Вход</a>
+													<form class="login-form" method="post" action="https://echo.htmlacademy.ru/"> 
+														<label class="visually-hidden">Электронная почта</label> 
+														<input type="text" name="email" placeholder="Электронная почта"> 
+														<label class="visually-hidden">Пароль</label>
+														<input type="password" name="password" placeholder="Пароль"> 
+														<div class="entrance"> 
+															<input type="submit" class="button" value="Войти"> 
+															<div class="help-wrapper"> 
+																<a href="#"><span>Забыли пароль?</span></a> 
+																<a href="#"><span>Новая регистрация</span></a> 
+															</div> 
+														</div> 
+													</form> 
+												</div>
 										</li>
 										<li class="btn basket"><a href="#">Пусто</a></li>
 									</ul>

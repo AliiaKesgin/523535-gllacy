@@ -14,12 +14,14 @@
           <header class="main-header-flex">
             <div class="header-navigations-flex">
               <div class="logo">
-                <img class="main-header-logo" src="img/svg-gllacy/logo.svg" width="154" height="64" alt="Логотип Gllacy">
+                <a href="index.html">
+                  <img class="main-header-logo" src="img/svg-gllacy/logo.svg" width="154" height="64" alt="Логотип Gllacy">
+                </a>
               </div>
               <nav class="main-menu">
                   <ul class="main-menu-list">
                     <li>
-                      <a href="#">Каталог</a>
+                      <a class="main-menu-current" href="#">Каталог</a>
                         <ul class="sub-menu catalog-sub">
                           <li><a class="new" href="#"><b>Новинки</b></a></li>
                           <li><a href="catalog.html">Сливочное</a></li>
@@ -36,17 +38,82 @@
                 <h2 class="visually-hidden">Навигация по сайту для пользователя</h2> 
                   <ul class="user-menu-list">
                     <li class="btn search">
-                      <a href="#">Поиск</a>
-                        <div class="modal modal-search">
-                          <form name="search" action="https://echo.htmlacademy.ru" method="get">
-                            <label for="search" class="visually-hidden">Поиск</label> 
-                            <input class="input-search" id="search" type="text" name="search" placeholder="Что ищем?"><img src="img/svg-gllacy/loupe.svg" alt="Поиск">
-                          </form>
-                        </div>  
+                      <div class="search-wrapper">
+                        <a href="#">Поиск</a>
+                          <div class="window window-search">
+                            <form name="search" action="https://echo.htmlacademy.ru" method="get">
+                              <label for="search" class="visually-hidden">Поиск</label>
+                              <input class="input-search" id="search" type="text" name="search" placeholder="Что ищем?">
+                            </form>
+                          </div>
+                      </div>
                     </li>
-                    <li class="btn login"><a href="#">Вход</a></li>
-                    <li class="btn basket btn-basket-active"><a href="#">2 товара</a></li>
-                  </ul>
+                    <li class="btn login">
+                        <div class="login-wrapper" tabindex="0">
+                          <a href="#">Вход</a>
+                          <form class="login-form" method="post" action="https://echo.htmlacademy.ru/"> 
+                            <label class="visually-hidden">Электронная почта</label> 
+                            <input type="text" name="email" placeholder="Электронная почта"> 
+                            <label class="visually-hidden">Пароль</label>
+                            <input type="password" name="password" placeholder="Пароль"> 
+                            <div class="entrance"> 
+                              <input type="submit" class="button" value="Войти"> 
+                              <div class="help-wrapper"> 
+                                <a href="#"><span>Забыли пароль?</span></a> 
+                                <a href="#"><span>Новая регистрация</span></a> 
+                              </div> 
+                            </div> 
+                          </form> 
+                        </div>
+                    </li>
+                    <li class="btn basket">
+                      <div class="basket-wrapper" tabindex="0">
+                          <a class="btn-basket-active" href="#">2 товара</a>
+                          <div class="basket-window">
+                            <div class="basket-window-flex">
+
+                              <!--1st block-->
+                              <div class="basket-list-flex">
+                                <div class="basket-item"> <!--1st item-->
+                                  <div class="basket-item-delete"><a class="delete" href="#">Удалить</a></div>
+                                  <div class="basket-item-photo"><img src="img/orange-jam-mini.jpg"></div>
+                                  <div class="basket-item-name"><p>Пломбир с апельсиновым джемом</p></div>
+                                  <div class="item-weight">1,5 кг</div>
+                                  <div><span>x</span></div>
+                                  <div class="item-price-kg">200 руб.</div>
+                                  <div class="item-price-total">300 руб.</div>
+                                </div>
+
+                                <div class="basket-item"> <!--2nd item-->
+                                  <div class="basket-item-delete"><a class="delete" href="#">Удалить</a></div>
+                                  <div class="basket-item-photo"><img src="img/strawberry-white-chocolate-mini.jpg"></div>
+                                  <div class="basket-item-name"><p>Клубничный пломбир с присыпкой из белого шоколада</p></div>
+                                  <div class="item-weight">1,5 кг</div>
+                                  <div><span>x</span></div>
+                                  <div class="item-price-kg">300 руб.</div>
+                                  <div class="item-price-total">450 руб.</div>
+                                </div>
+
+                              </div> 
+
+                              <!--2nd block-->
+                              <div class="list-price-total"> 
+                                  <p>Итого: 750 руб.</p>
+                              </div>
+
+                              <!--3rd block-->
+                              <div class="basket-checkout-button">    
+                                <input class="button" type="submit" name="checkout-button" value="Оформить заказ">
+                              </div>
+
+                            </div> <!--/basket-window-flex-->
+
+                        </div>  <!--/basket-window-->
+
+                      </div> <!--/basket-wrapper-->
+                  </li>
+
+                </ul>
               </nav>
             </div>
 
@@ -357,38 +424,23 @@
           </article>  
 
         </section>
+      </main>  
 
-         <div class="pagination container">
-          <ul class="pagination-list">
-            <li class="pagination-item pagination-item-current">
-              <a>1</a>
-            </li>
-            <li class="pagination-item">
-              <a href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a href="#">4</a>
-            </li>
-            <li class="pagination-item">
-              <a href="#">5</a>
-            </li>
-            <li class="pagination-item-next">
-<!--             <h3 class="visually-hidden">Кнопка "Вперед"</h3>   -->
-              <a href="#"></a>
-            </li>
+         <div class="paginator">
+          <ul class="paginator-list">
+            <li><a class="prev" href="#">Назад</a></li>
+            <li class="current-page"><a>1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a class="next" href="#">Вперёд</a></li>
           </ul>
         </div>
 
 
-
-<!--     </section>  -->
-  </main>  
-
-    <!--3.***ПОДВАЛ***-->
-    <footer class="main-footer container">
+    <!--3. Подвал-->
+    <footer class="main-footer">
       <div class="main-footer-wrapper">
         <div class="footer-social">
           <ul>
