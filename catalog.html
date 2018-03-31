@@ -30,8 +30,8 @@
                           <li><a href="#">Мелорин</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Доставка и оплата</a></li>
-                    <li><a href="#">О Компании</a></li>
+                    <li><a class="link" href="#">Доставка и оплата<span></a></li>
+                    <li><a class="link" href="#">О Компании</a></li>
                   </ul>
               </nav>
               <nav class="user-menu">
@@ -117,21 +117,14 @@
               </nav>
             </div>
 
+            <div class="header-bottom-flex">
               <div class="header-contacts">
-              <p class="mode">
-                С 10 до 20, ежедневно<br/>
-                <span>8 812 450-25-25</span>
-              </p>
-            </div>
-          </header>  
-
-
-
-
-          <!--2.***ОСНОВНОЙ РАЗДЕЛ САЙТА***--> 
-    <main class="inner-page">
-              <!-- <nav class="breadcrumbs-menu"> -->
-                <!--2.1. Меню "Хлебные крошки"-->
+                <p class="mode">
+                  С 10 до 20, ежедневно<br/>
+                  <span>8 812 450-25-25</span>
+                </p>
+              </div>
+              <div>
                 <h2 class="visually-hidden">Меню "Хлебные крошки"</h2> 
                 <ul class="breadcrumbs">
                   <li>
@@ -140,15 +133,23 @@
                   <li>
                     <a href="catalog.html">Каталог<span>&nbsp;&raquo;</span></a>
                   </li>
-                  <li class="breadcrumbs-current">
-                    <a href="#">Сливочное</a>
-                  </li> 
+                  <li class="breadcrumbs-current">Сливочное</li> 
                 </ul>
+              </div>
+            </div>
+          </header>  
+
+
+
+
+          <!--2.***ОСНОВНОЙ РАЗДЕЛ САЙТА***--> 
+    <main class="inner-page">
+
               <!-- </nav>  -->
-    <h2 class="page-title">Сливочное мороженое</h2>
+		<h2 class="page-title">Сливочное мороженое</h2>
 
     <!--2.2.Сортировка товаров-->
-    <section class="filters">
+		<section class="filters">
     <h3 class="visually-hidden">Сортировка товаров</h3> 
         <form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
           <div class="filters-flex">
@@ -168,11 +169,26 @@
               <!--2.2.2.Выбор ценового диапазона-->
               <div class="sorting by-price">
                 <h2 class="visually-hidden">Выбор ценового диапазона</h2> 
-                <h2 class="filter-label label-price">Цена: 100 руб. - 500 руб.</h2>
-                <label for="price-filter" class="visually-hidden">Цена: 100 руб. - 500 руб.</label>
-                <div class="price-range-box">
-                  <input id="price-filter" type="range" name="price" min="100" max="500" step="10"> <!--Как оформить двойной ползунок????-->
-                </div>  
+
+                <div class="price-range-wrapper">
+                <h2 class="filter-label label-price">Цена: 100 руб. - 500 руб</h2>
+                  <label for="price-min" class="visually-hidden">from</label>
+                  <input class="price-min" id="price-min" type="text" name="min-price" value="100">
+                  <label for="price-max" class="visually-hidden">to</label>
+                  <input class="price-max" id="price-max" type="text" name="max-price" value="500">
+                </div>
+                  
+                 <div class="range-controls">
+                   <div class="scale">
+                      <div class="bar"></div>
+                   </div>
+
+                   <div class="toggle min-toggle"></div>
+
+                   <div class="toggle max-toggle"></div>
+
+                 </div>
+
               </div>
 
               <!--2.2.2.Выбор жирности мороженого-->
@@ -188,7 +204,7 @@
                     </label>   
 
                     <label class="fat-filter-radio">
-                      <input class="visually-hidden" type="radio" name="fat-percent" value="less-10%">
+                      <input class="visually-hidden" type="radio" name="fat-percent" value="less-10%" checked="">
                       <span class="radio-indicator"></span>
                       до 10%
                     </label>  
@@ -215,34 +231,34 @@
             <!--2.2.3.Выбор наполнителя-->
             <div class="sorting by-fillers">
               <h2 class="visually-hidden">Выбор наполнителя к мороженому</h2>
-              <h3 class="filter-label label-fat">Наполнители:</h3>
+              <h3 class="filter-label label-filler">Наполнители:</h3>
                 <div class="fillers-inputs-box">
                   <label class="filler-filter-checkbox">
-                    <input class="visually-hidden" type="filler-checkbox" name="fillers-checkbox" value="chocolate" checked="">
+                    <input class="visually-hidden" type="checkbox" name="filler-chocolate" value="chocolate" checked="">
                     <span class="checkbox-indicator"></span>
                     шоколадные
                   </label>  
 
                   <label class="filler-filter-checkbox">
-                    <input class="visually-hidden" type="filler-checkbox" name="fillers-checkbox" value="sugar" checked="">
+                    <input class="visually-hidden" type="checkbox" name="filler-sugar" value="sugar" checked="">
                     <span class="checkbox-indicator"></span>
                     сахарные присыпки
                   </label>  
 
                   <label class="filler-filter-checkbox">
-                    <input class="visually-hidden" type="filler-checkbox" name="fillers-checkbox" value="fruits" checked="">
+                    <input class="visually-hidden" type="checkbox" name="filler-fruits" value="fruits" >
                     <span class="checkbox-indicator"></span>
                     фрукты
                   </label>  
 
                   <label class="filler-filter-checkbox">
-                    <input class="visually-hidden" type="filler-checkbox" name="fillers-checkbox" value="syrup" checked="">
+                    <input class="visually-hidden" type="checkbox" name="filler-syrup" value="syrup" >
                     <span class="checkbox-indicator"></span>
                     сиропы
                   </label>  
                   
                   <label class="filler-filter-checkbox">
-                    <input class="visually-hidden" type="filler-checkbox" name="fillers-checkbox" value="jam" checked="">
+                    <input class="visually-hidden" type="checkbox" name="filler-jam" value="jam">
                     <span class="checkbox-indicator"></span>
                     джемы
                   </label> 
