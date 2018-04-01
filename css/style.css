@@ -833,7 +833,7 @@ input[type="submit"]:active {
 	        box-sizing: border-box;
 }
 
-..basket-item-name p{
+.basket-item-name p{
 	vertical-align: middle;
 }
 
