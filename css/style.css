@@ -103,10 +103,9 @@ img {
 }
 
 .main-menu-list li{
-	display: inline-block;
-	vertical-align: middle;
+	display: block;
 
-	margin-right: 30px;
+	margin-right: 10px;
 
 	font-size: 16px;
 	line-height: 18px;
@@ -118,11 +117,11 @@ img {
 }
 
 .main-menu a{
-    border-bottom: 1px solid rgba(255,255,255,.2);
-
     font-size: 16px;
     line-height: 18px;
     font-weight: 700px;
+
+    border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
 /*submenu*/
@@ -400,20 +399,20 @@ img {
 }
 
 
-.search:hover{
+.search >a :hover{
 	background: url("..//img/svg-gllacy/loupe-black.svg") center no-repeat;
 	background-color: white;
 
 }
 
-.login a:hover{
+.login > a:hover{
 	background: url("..//img/svg-gllacy/entrance.svg")  17px 7px no-repeat;
 	background-color: white;
 
 	color: black;
 }
 
-.basket a:hover{
+.basket > a:hover{
 	background: url("..//img/svg-gllacy/basket-red.svg") 17px 7px no-repeat;
 	background-color: white;
 	color: black;
@@ -462,6 +461,11 @@ img {
 	padding-bottom: 5px;
 }
 
+
+.search a{ 
+	font-size: 0;
+}
+
 .window-search{
 	display:none;
 
@@ -488,7 +492,7 @@ img {
 
 .window-search .input-search{
  	width:100%;
- 	padding:12px 15px;
+ 	padding:10px 15px;
  	-webkit-box-sizing:border-box;
  	        box-sizing:border-box;
 
@@ -498,26 +502,33 @@ img {
 
  	border:1px solid rgba(178,178,178,.52);
  	border-radius:5px;
- 	
  }
 
- .window-search .input-search:hover{
+ .window-search input:hover{
  	padding:9px 14px;
 
  	border:2px solid rgba(154,154,154,.52);
  }
 
-.window-search .input-search:focus{
+.window-search input:focus{
 	padding:9px 14px;
 
 	border:2px solid rgba(46,136,228,.52);
 }
 
-.window-search .input-search:active{
+.window-search input:active{
 	padding:9px 14px;
 
 	border:2px solid rgb(143, 189, 236);
 }
+
+.window-search  input{
+	font-size:14px;
+	line-height:24px;
+	-webkit-box-sizing:border-box;
+	        box-sizing:border-box
+}
+
 
 /*окно входа*/
 .login-wrapper {
@@ -677,14 +688,14 @@ input[type="submit"]:active {
 	display: none;
 
     position: absolute;
-    top: 37px;
+    top: 40px;
     right: 0;
     z-index: 50;
 
     
     width: 540px;
     min-height:242px;
-    padding: 20px 15px;
+    padding: 17px 15px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;  
 
@@ -752,6 +763,7 @@ input[type="submit"]:active {
 	        align-items: center;
 
 	width: 100%;
+	min-height: 42px;
 
 	font-size: 13px;
 	line-height:16px;
@@ -761,6 +773,8 @@ input[type="submit"]:active {
 
 
 .basket-item-delete{
+	position: relative;
+
 	width: 12px;
 	padding-right: 15px;
 }
@@ -778,7 +792,7 @@ input[type="submit"]:active {
   	content: "";
 
   	position: absolute;
-  	top:20px;
+  	top:7px;
   	left: 0;
 
   	width: 12px;
@@ -812,7 +826,11 @@ input[type="submit"]:active {
 
 .basket-item-name{
 	width: 220px;
-	max-height: 35px;
+	min-height: 35px;
+	padding: 0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 ..basket-item-name p{
@@ -822,6 +840,7 @@ input[type="submit"]:active {
 .item-weight{
 	min-width: 33px;
 	margin-left: auto;
+	margin-left: 20px;
 }
 
 .basket-list-flex span{
@@ -838,7 +857,7 @@ input[type="submit"]:active {
 
 .item-price-total{
 	min-width: 50px;
-	margin-left: auto;
+	margin-left: 30px;
 }
 
 /*2nd block*/
@@ -846,7 +865,7 @@ input[type="submit"]:active {
 	min-width: 106px;
 	max-height:18px;
 	margin-left:auto;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 
 	font-size: 15px;
 	line-height:18px;
@@ -2616,7 +2635,22 @@ input[type="submit"]:active {
 }
 
 .breadcrumbs li{
-	margin-right: 13px;
+	position: relative;
+
+	display: inline-block;
+	vertical-align: bottom;
+
+	margin-right: 18px;
+	padding-top: 2px;
+}
+
+
+.breadcrumbs li:not(:last-of-type)::after {
+	position: absolute;
+	top: 1px;
+	right: -15px; 
+
+	content: "»";
 }
 
 .breadcrumbs a{
@@ -2631,7 +2665,7 @@ input[type="submit"]:active {
 .filters{
 	width: 100%;
 	max-height: 133px;
-	margin-bottom: 38px;
+	margin-bottom: 36px;
 }
 .filters-form{
 	width: 865px;
