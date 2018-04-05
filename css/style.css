@@ -1,6 +1,4 @@
 body{
-/*	position: relative;
-*/
 	margin: 0px;
 	padding: 0px;
 
@@ -1282,17 +1280,18 @@ img {
 	background-image: url("../img/svg-gllacy/hit.svg");
 }
 
-.hit-item-photo::after{
+.item-photo::after{
 	position: absolute;
 	content: '';
-	top: 218px;
+	top: 217px;
 	left: 80px;
 	z-index: 2;
 
 	width: 28px;
 	height: 34px;
 
-	background-image: url("../img/svg-gllacy/ruble.svg");
+	background: url("../img/svg-gllacy/ruble.svg") center no-repeat;
+
 }
 
 .price{
@@ -1300,9 +1299,6 @@ img {
 	top:212px;
 	left:0;
 	z-index: 3;
-
-	display: inline-block;
-	vertical-align: bottom;
 
 	max-height: 45px;
 
@@ -1962,10 +1958,15 @@ img {
 	opacity: 1;
 }
 
-.social-button:active,
+/*.social-button:active,
 .social-button:focus {
 	background-color:#e9e9e9;
 	border-color: #dae2de;
+}*/
+
+.social-buttonl:active{
+	opacity: 0.8;
+	box-shadow:inset 0 2px 1px #888
 }
 
 .footer-menu-flex{
@@ -2347,7 +2348,7 @@ img {
 }
 
 /*каталог - активня кнопка*/
-.main-menu-list .menu-current {  
+.menu-current {  
 	margin: 0;
     padding: 7px 13px;
     background-color: #d07058;
@@ -2526,8 +2527,10 @@ img {
 		appearance: none; 
 
 	width: 193px;
-	max-height: 38px;
-	padding: 8px 33px 8px 15px;
+	max-height: 36px;
+/*	padding: 8px 33px 8px 15px;*/
+    margin: 0;
+    padding: 0 25px 0 13px;
 
 	font: inherit; 
 	font-size: 16px; 
@@ -2542,13 +2545,18 @@ img {
 	background-color: rgba(255, 255, 255, 0.2); 
 	background-image: url("..//img/svg-gllacy/select-arrow.svg"); 
 	background-repeat: no-repeat; 
+	background-position: 0 0;
 	background-position: 93% 15px; 
+
+	outline: none;
+
+	overflow: hidden;
 
 	cursor: pointer; 
 }
 
-.by-popularity select::ms-espand{ /*************************************************************/
-	display: none;
+select::-ms-expand { 
+	display: none; 
 }
 
 .by-popularity option{ 
