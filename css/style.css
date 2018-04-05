@@ -2417,26 +2417,21 @@ img {
 
 /*Фильтры*/
 .filters{
-	position: relative;
-/*	z-index: 1;
-*/
 	width: 100%;
 	min-height: 136px;
 	margin-bottom: 30px;
 	padding: 0;
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .filters-form{
-	position: absolute;
-	z-index: 5;
-
 	width: 865px;
 	max-height: 134px;
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
+
 
 .filters-flex{
 	display: -webkit-box;
@@ -2553,24 +2548,35 @@ img {
 	overflow: hidden;
 
 	cursor: pointer; 
+
+	text-transform: none;
 }
 
 select::-ms-expand { 
 	display: none; 
 }
 
-.by-popularity option{ 
+.by-popularity option{  /***************************************************/
+	display: block;
+
+	color: color: #323232;
     font-weight: normal;
-    display: block;
-    white-space: pre;
+    
+/*    white-space: pre;
     min-height: 1.2em;
-    padding: 0px 2px 1px;
+    padding: 0px 2px 1px;*/
 }
 
-.by-popularity select:hover { 
+.by-popularity select:hover{ 
     font-weight: 500;
-    color: #000000;
+    color: #323232;
     background: url("../img/svg-gllacy/icon-down-dir.svg") 95% 15px no-repeat  #ffffff;
+}
+
+.by-popularity option:hover option {
+    font-weight: 500;
+    color: #323232;
+    background-color: #ffffff;
 }
 
 /*фильтр по цене*/
