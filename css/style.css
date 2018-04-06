@@ -146,13 +146,13 @@ img {
 
     font-size: 16px;
     line-height: 18px;
-    font-weight: 400;
+    font-weight: 200;
 
  	border-radius: 17px;
  	border: none;
 }
 
-.main-menu-list span:not(.menu-current span){
+.main-menu-list span{
 	text-decoration: none;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -2445,7 +2445,8 @@ select {
 
 	height: 36px;
 	padding: 0 32px 3px 15px;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 
 	font: inherit;
 	font-size: 16px;
