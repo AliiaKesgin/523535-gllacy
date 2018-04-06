@@ -1943,25 +1943,97 @@ img {
 	width: 32px;
 	height: 32px;
 
-	border: 3px solid #c2cec7;
+	border: 3px solid #ffffff;
 	border-radius: 50%;
+	opacity: 0.5;
+}
+
+.social-button:hover{
+	opacity: 0.7;
+}
+
+.social-button:active{
+	border-color: #e9e9e9;
+}
+
+.twitter, .instagram, .fb, .vk{
+	position: relative;
+}
+
+.twitter::before{
+	position: absolute;
+
+	content: "";
+
+	width: 32px;
+	height: 32px;
+
+	top: 3px;
+	left: 3px;
+	background-image: url("../img/svg-gllacy/twitter.svg");
 	opacity: 0.8;
 }
 
-.social-button:hover {
+.instagram::before{
+	position: absolute;
+
+	content: "";
+
+	width: 32px;
+	height: 32px;
+
+	top: 3px;
+	left: 3px;
+	background-image: url("../img/svg-gllacy/instagram.svg");
+	opacity: 0.8;
+}
+
+.fb::before{
+	position: absolute;
+
+	content: "";
+
+	width: 32px;
+	height: 32px;
+
+	top: 3px;
+	left: 3px;
+	background-image: url("../img/svg-gllacy/fb.svg");
+	opacity: 0.8;
+}
+
+.vk::before{
+	position: absolute;
+
+	content: "";
+
+	width: 32px;
+	height: 32px;
+
+	top: 3px;
+	left: 3px;
+	background-image: url("../img/svg-gllacy/vk.svg");
+	opacity: 0.8;
+}
+
+
+.twitter-button:hover .twitter::before, /*************************************/
+.instagram-button:hover .instagram::before,
+.fb-button:hover .instagram::before,
+.vk-button:hover .instagram::before,
+{
 	opacity: 1;
 }
 
-/*.social-button:active,
-.social-button:focus {
-	background-color:#e9e9e9;
-	border-color: #dae2de;
-}*/
 
-.social-buttonl:active{
-	opacity: 0.8;
-	box-shadow:inset 0 2px 1px #888
+.twitter-button:aktive .twitter::before, /****************************************/
+.instagram-button:aktive .instagram::before,
+.fb-button:aktive .instagram::before,
+.vk-button:aktive .instagram::before,
+{
+	opacity: 0.7;
 }
+
 
 .footer-menu-flex{
 	display: -webkit-box;
@@ -2757,7 +2829,7 @@ input[type="checkbox"]:checked + label::before {
 	position: absolute;
 
     top: 0;
-    left: 0;
+    left: -1px;
 
 	width: 24px;
     height: 20px;
